@@ -1,4 +1,4 @@
-package org.sandbox;
+package org.boloor;
 
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
@@ -18,14 +18,19 @@ public final class GitHookInstallMojo extends AbstractMojo {
 
     private static final String SHEBANG = "#!/bin/sh";
     private static final Path HOOK_DIR_PATH = Paths.get(".git/hooks");
+    private static final Path GIT_DIR_PATH = Paths.get(".git");
 
     @Parameter
     private Map<String, String> hooks;
 
     @Override
     public void execute() throws MojoExecutionException, MojoFailureException {
+        if (!Files.exists(GIT_DIR_PATH)) {
+            getLog().warn( "not a git repository");
+            return;
+        }
         if (!Files.exists(HOOK_DIR_PATH)) {
-            throw new MojoExecutionException("not a git repository");
+            HOOK_DIR_PATH.toFile().mkdir();
         }
         for (Map.Entry<String, String> hook : hooks.entrySet()) {
             String hookName = hook.getKey();

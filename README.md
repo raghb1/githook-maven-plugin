@@ -46,13 +46,13 @@ NOTE: The plugin rewrites hooks.
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.sandbox</groupId>
+    <groupId>org.boloor</groupId>
     <artifactId>githook-test</artifactId>
     <version>1.0.0</version>
     <build>
         <plugins>
             <plugin>
-                <groupId>org.sandbox</groupId>
+                <groupId>org.boloor</groupId>
                 <artifactId>githook-maven-plugin</artifactId>
                 <version>1.0.0</version>
                 <executions>

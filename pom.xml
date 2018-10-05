@@ -3,23 +3,23 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.sandbox</groupId>
+    <groupId>org.boloor</groupId>
     <artifactId>githook-maven-plugin</artifactId>
     <version>1.0.0</version>
     <packaging>maven-plugin</packaging>
     <name>Git Hook Plugin</name>
     <description>Maven plugin to configure and install local git hooks</description>
-    <url>https://github.com/olukyrich/githook-maven-plugin</url>
+    <url>https://github.com/raghb1/githook-maven-plugin</url>
     <dependencies>
         <dependency>
             <groupId>org.apache.maven</groupId>
             <artifactId>maven-plugin-api</artifactId>
-            <version>3.3.9</version>
+            <version>3.5.3</version>
         </dependency>
         <dependency>
             <groupId>org.apache.maven.plugin-tools</groupId>
             <artifactId>maven-plugin-annotations</artifactId>
-            <version>3.4</version>
+            <version>3.5.2</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -28,7 +28,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-plugin-plugin</artifactId>
-                <version>3.4</version>
+                <version>3.5.2</version>
                 <executions>
                     <execution>
                         <id>default-descriptor</id>
